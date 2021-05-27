@@ -108,18 +108,28 @@ if (markerFound == 1) {
                 bezierEvaluate(p0.x, p1.x, p2.x, p3.x, t),                   
                 bezierEvaluate(p0.y, p1.y, p2.y, p3.y, t),                   
                 bezierEvaluate(p0.z, p1.z, p2.z, p3.z, t)               
-            );           
+            );
+		function myFunction() {
+				var vid = document.getElementById("Video_Asset_1").src;
+				document.getElementById("Video_Asset_1").innerHTML = vid;
+				}
+		function myFunction2() {
+				var vid = document.getElementById("Video_Asset_0").src;
+				document.getElementById("Video_Asset_0").innerHTML = vid;
+				}						
         }     
     }
+		
+}
 });
 </script>
 
 <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
-    <button class="button" id="btn1">anterior</button>
-    <button class="button" id="btn2">siguiente</button>
-    
-   
-  </div> END: Unity Compiled Events -->
+    <button class="button" id="btn1" onclick="myFunction()">anterior</button>
+    <button class="button" id="btn2" onclick="myFunction2()">siguiente</button>
+ </div>
+
+END: Unity Compiled Events -->
 
 <!-- BEGIN: Middle HTML -->
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
