@@ -10,8 +10,7 @@
 
 <style>
   .button {
-    background-color: #4CAF50;
-    opacity: 1;
+    background-color: #4CAF50; 
     border: none;
     color: white;
     padding: 7px;
@@ -21,13 +20,10 @@
     font-size: 12px;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 12px;
     border: 2px solid rgba(9, 148, 28, 0.541);
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
-  .button:hover{
-    opacity: 0.5;
-	}
   
   </style>
 <!-- END: Top HTML -->
@@ -112,8 +108,15 @@ if (markerFound == 1) {
                 bezierEvaluate(p0.x, p1.x, p2.x, p3.x, t),                   
                 bezierEvaluate(p0.y, p1.y, p2.y, p3.y, t),                   
                 bezierEvaluate(p0.z, p1.z, p2.z, p3.z, t)               
-            };
-	
+            );
+		function myFunction() {
+				var vid = document.getElementById("Video_Asset_1").src;
+				document.getElementById("Video_Asset_1").innerHTML = vid;
+				}
+		function myFunction2() {
+				var vid = document.getElementById("Video_Asset_0").src;
+				document.getElementById("Video_Asset_0").innerHTML = vid;
+				}						
         }     
     }
 		
@@ -121,23 +124,23 @@ if (markerFound == 1) {
 });
 </script>
 
-<div style='position: fixed; bottom:75px; width:100%; text-align: center; z-index: 1;'>
-    <button class="button" id="btn1"</button>
-    <button class="button" id="btn2"</button>											
-</div>
+<div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+    <button class="button" id="btn1" onclick="myFunction()">anterior</button>
+    <button class="button" id="btn2" onclick="myFunction2()">siguiente</button>
+ </div>
 
 END: Unity Compiled Events -->
 
 <!-- BEGIN: Middle HTML -->
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 
-        <div style='position: absolute; bottom:10px; right: 30px; width:100%; text-align: center; z-index: 1;'>      
+        <div style='position: absolute; bottom: 10px; right: 30px; width:100%; text-align: center; z-index: 1;'>      
             <button id="mutebutton" style='position: absolute; bottom: 10px'>
-                Silenciar
+                Unmute
             </button>
         </div>
 
-        <div style='position: absolute; bottom:5px; left: 30px; width:100%; text-align: right; z-index: 1;'>
+        <div style='position: absolute; bottom: 5px; left: 30px; width:100%; text-align: right; z-index: 1;'>
             <input type="image" id="fullscreen" src="../fullscreen.png" style='position: absolute; bottom: 0px; right: 35px;'>
             </input>
         </div>
@@ -149,7 +152,9 @@ END: Unity Compiled Events -->
 
 <!-- BEGIN: Unity Compiled Assets -->
 <a-assets>
-<video id="Video_Asset_0" autoplay="false" loop crossorigin="anonymous" src="videos/Tabla_evolucion_barras_COVID-19.mp4"></video>
+<video id="Video_Asset_0" autoplay="false" loop crossorigin="anonymous" src="videos/Tabla_evolucion_barras_COVID-19.mp4" webkit-playsinline playsinline controls muted></video>
+<video id="Video_Asset_1" autoplay="false" loop crossorigin="anonymous" src="videos/Tabla_evolucion_lineas_COVID-19.mp4" webkit-playsinline playsinline controls muted></video>        
+</a-assets>
 <!-- END: Unity Compiled Assets -->
 <!-- BEGIN: Add Image Target (marker) -->
 <a-marker id="marker" type="pattern" preset="custom" src="pattern-default-marker.patt" url="pattern-default-marker.patt" emitevents="true" button>
@@ -166,3 +171,4 @@ END: Unity Compiled Events -->
 </a-scene>
 </body>
 </html><!-- END: Bottom HTML -->
+
