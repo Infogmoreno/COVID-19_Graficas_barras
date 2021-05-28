@@ -42,7 +42,7 @@ var marker = document.querySelector("#marker");
 var fullbutton = document.querySelector("#fullscreen");
 var button = document.querySelector("#mutebutton");
 var Video_0 = document.querySelector("#Video_Asset_0");
-var Video_1 = document.querySelector("#Video_Asset_1");
+	
 marker.addEventListener("markerFound", function (evt) {
 markerFound = 1;
 Video_0.play();
@@ -115,14 +115,7 @@ if (markerFound == 1) {
                 bezierEvaluate(p0.y, p1.y, p2.y, p3.y, t),                   
                 bezierEvaluate(p0.z, p1.z, p2.z, p3.z, t)               
             );
-	function myFunction() {
-		var vid = document.getElementById("Video_Asset_0").src;
-		document.getElementById("Video_Asset_0").innerHTML = vid;
-				}
-	function myFunction2() {
-		var vid = document.getElementById("Video_Asset_1").src;
-		document.getElementById("Video_Asset_0").innerHTML = vid;
-				}						
+						
         }     
     }
 		
@@ -158,8 +151,7 @@ END: Unity Compiled Events -->
 
 <!-- BEGIN: Unity Compiled Assets -->
 <a-assets>
-<video id="Video_Asset_0" autoplay="false" loop crossorigin="anonymous" src="videos/Tabla_evolucion_barras_COVID-19.mp4" webkit-playsinline playsinline controls muted></video>
-<video id="Video_Asset_1" autoplay="false" loop crossorigin="anonymous" src="videos/Tabla_evolucion_lineas_COVID-19.mp4" webkit-playsinline playsinline controls muted></video>        
+<video id="Video_Asset_0" autoplay="false" loop crossorigin="anonymous" src="videos/Tabla_evolucion_barras_COVID-19.mp4" webkit-playsinline playsinline controls muted></video>    
 </a-assets>
 <!-- END: Unity Compiled Assets -->
 <!-- BEGIN: Add Image Target (marker) -->
