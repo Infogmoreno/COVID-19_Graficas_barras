@@ -22,13 +22,13 @@
     font-size: 12px;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 12px;
+    border-radius: 6px;
     border: 2px solid rgba(9, 148, 28, 0.541);
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
-  .button{
+  .button:hover{
     opacity:0.5;	
-	}
+  }
   
   </style>
 <!-- END: Top HTML -->
@@ -42,6 +42,7 @@ var marker = document.querySelector("#marker");
 var fullbutton = document.querySelector("#fullscreen");
 var button = document.querySelector("#mutebutton");
 var Video_0 = document.querySelector("#Video_Asset_0");
+var Video_1 = document.querySelector("#Video_Asset_1");
 marker.addEventListener("markerFound", function (evt) {
 markerFound = 1;
 Video_0.play();
@@ -114,13 +115,13 @@ if (markerFound == 1) {
                 bezierEvaluate(p0.y, p1.y, p2.y, p3.y, t),                   
                 bezierEvaluate(p0.z, p1.z, p2.z, p3.z, t)               
             );
-		function myFunction() {
-				var vid = document.getElementById("Video_Asset_0").src;
-				document.getElementById("Video_Asset_0").innerHTML = vid;
+	function myFunction() {
+		var vid = document.getElementById("Video_Asset_0").src;
+		document.getElementById("Video_Asset_0").innerHTML = vid;
 				}
-		function myFunction2() {
-				var vid = document.getElementById("Video_Asset_0").src;
-				document.getElementById("Video_Asset_1").innerHTML = vid;
+	function myFunction2() {
+		var vid = document.getElementById("Video_Asset_1").src;
+		document.getElementById("Video_Asset_0").innerHTML = vid;
 				}						
         }     
     }
