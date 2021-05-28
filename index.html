@@ -10,7 +10,9 @@
 
 <style>
   .button {
-    background-color: #4CAF50; 
+     
+    background-color: #4CAF50;
+    opacity:1;
     border: none;
     color: white;
     padding: 7px;
@@ -24,6 +26,9 @@
     border: 2px solid rgba(9, 148, 28, 0.541);
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
+  .button{
+    opacity:0.5;	
+	}
   
   </style>
 <!-- END: Top HTML -->
@@ -110,12 +115,12 @@ if (markerFound == 1) {
                 bezierEvaluate(p0.z, p1.z, p2.z, p3.z, t)               
             );
 		function myFunction() {
-				var vid = document.getElementById("Video_Asset_1").src;
+				var vid = document.getElementById("Video_Asset_0").src;
 				document.getElementById("Video_Asset_0").innerHTML = vid;
 				}
 		function myFunction2() {
 				var vid = document.getElementById("Video_Asset_0").src;
-				document.getElementById("Video_Asset_0").innerHTML = vid;
+				document.getElementById("Video_Asset_1").innerHTML = vid;
 				}						
         }     
     }
