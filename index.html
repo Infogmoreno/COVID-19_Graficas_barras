@@ -109,16 +109,14 @@ if (markerFound == 1) {
                 bezierEvaluate(p0.y, p1.y, p2.y, p3.y, t),                   
                 bezierEvaluate(p0.z, p1.z, p2.z, p3.z, t)               
             );
-		function changeSource(url) {
-  		   var video = document.getElementById('Video_Asset_0');
-   		   video.src = videos/Tabla_evolucion_barras_COVID-19.mp4;
-   		   video.play();
-		}
-		function changeSource2(url) {
-  		   var video = document.getElementById('Video_Asset_0');
-   		   video.src = videos/Tabla_evolucion_lineas_COVID-19.mp4;
-   		   video.play();
-		}	
+	document.getElementById("btn1").addEventListener("click", (e)=>{
+
+ 	 var v = document.querySelector('#Video_Asset_0').muted=false;
+})
+	document.getElementById("btn2").addEventListener("click", (e)=>{
+
+ 	 var v = document.querySelector('#Video_Asset_1').muted=false;
+}
         }     
     }
 		
@@ -127,8 +125,8 @@ if (markerFound == 1) {
 </script>
 
 <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
-    <button class="button" id="btn1" onclick="changeSource()">anterior</button>
-    <button class="button" id="btn2" onclick="changeSource2()">siguiente</button>
+    <button class="button" id="btn1>anterior</button>
+    <button class="button" id="btn2">siguiente</button>
  </div>
 
 END: Unity Compiled Events -->
@@ -154,7 +152,8 @@ END: Unity Compiled Events -->
 
 <!-- BEGIN: Unity Compiled Assets -->
 <a-assets>
-<video id="Video_Asset_0" autoplay="false" loop crossorigin="anonymous" src="videos/Tabla_evolucion_barras_COVID-19.mp4" webkit-playsinline playsinline controls muted></video>     
+<video id="Video_Asset_0" autoplay="false" loop crossorigin="anonymous" src="videos/Tabla_evolucion_barras_COVID-19.mp4"></video>
+<video id="Video_Asset_1" autoplay="false" loop crossorigin="anonymous" src="videos/Tabla_evolucion_lineas_COVID-19.mp4"></video>
 </a-assets>
 <!-- END: Unity Compiled Assets -->
 <!-- BEGIN: Add Image Target (marker) -->
