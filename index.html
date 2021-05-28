@@ -111,7 +111,7 @@ if (markerFound == 1) {
             );
 		function myFunction() {
 				var vid = document.getElementById("Video_Asset_1").src;
-				document.getElementById("Video_Asset_1").innerHTML = vid;
+				document.getElementById("Video_Asset_0").innerHTML = vid;
 				}
 		function myFunction2() {
 				var vid = document.getElementById("Video_Asset_0").src;
@@ -124,7 +124,7 @@ if (markerFound == 1) {
 });
 </script>
 
-<div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+<div style='position: fixed; bottom:70px; width:100%; text-align: center; z-index: 1;'>
     <button class="button" id="btn1" onclick="myFunction()">anterior</button>
     <button class="button" id="btn2" onclick="myFunction2()">siguiente</button>
  </div>
