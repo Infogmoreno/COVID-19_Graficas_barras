@@ -62,15 +62,14 @@ Video_0.muted=false;
 button.innerHTML="Unmute";
 Video_0.muted=true;
 }
-document.getElementById("btn1").addEventListener("click", (e)=>{
-
-  var v = document.querySelector('#Video_Asset_0').visible=false;
-})
-document.getElementById("btn2").addEventListener("click", (e)=>{
-
-  var v = document.querySelector('#Video_Asset_1').visible=true;
-})
-});
+			function video2() {
+				document.querySelector('##Video_Asset_0').setAttribute('visible', 'false');
+				document.querySelector('##Video_Asset_1').setAttribute('visible', 'true');
+			}
+			function video1() {
+				document.querySelector('##Video_Asset_0').setAttribute('visible', 'false');
+				document.querySelector('##Video_Asset_1').setAttribute('visible', 'true');
+			}
 
         fullbutton.addEventListener("click", function (evt) {
             if (fullscreen == 0) {
@@ -134,8 +133,8 @@ if (markerFound == 1) {
 </script>
 
 <div style='position: fixed; bottom:70px; width:100%; text-align: center; z-index: 1;'>
-    <button class="button" id="btn1">anterior</button>
-    <button class="button" id="btn2">siguiente</button>
+    <button class="button" id="btn1" onclick="video2()">anterior</button>
+    <button class="button" id="btn2" onclick="video1()">siguiente</button>
  </div>
 
 END: Unity Compiled Events -->
@@ -170,7 +169,8 @@ END: Unity Compiled Events -->
 <!-- END: Add Image Target (marker) -->
 
 <!-- BEGIN: Unity Compiled Objects -->
-<a-video width="3.2" height="1.8" src="#Video_Asset_0" class="intersectable" position="0 0 -2.5" rotation="0 0 0" color="#FFFFFF" 
+<a-video width="3.2" height="1.8" src="#Video_Asset_0" class="intersectable" position="0 0 -2.5" rotation="0 0 0" color="#FFFFFF"
+<a-video width="3.2" height="1.8" src="#Video_Asset_1" class="intersectable" position="0 0 -2.5" rotation="0 0 0" color="#FFFFFF"
 ></a-video>
 <!-- END: Unity Compiled Objects -->
 
